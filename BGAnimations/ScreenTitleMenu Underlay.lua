@@ -10,28 +10,28 @@ return Def.ActorFrame{
 		InitCommand=function(self) self:Center():diffuse(color(ThemeColor)):zoom(SimSys.Resize(self:GetWidth(),self:GetHeight(),SCREEN_WIDTH,SCREEN_HEIGHT)):zoomy(0.75) end;	
 	};
 	Def.ActorFrame{
-		OnCommand=function(self) self:xy(10,40) end;
+		OnCommand=function(self) self:xy(10,SCREEN_CENTER_Y) end;
 		--BackKeyPress,BackgroundYSize,BackgroundXSize,BackgroundBlinkDuration
-		SimSys.SimScroll({"screen,ScreenInit",22,15,1},{
+		SimSys.SimScroll({"screen,ScreenInit",24,15,1},{
 		--ButtonName,Command,yoffset,halign,TextActiveColour,TextInactiveColour,TextActiveBackground1,TextActiveBackground2,MoveToNextScreenDuration
 			{"GameStart",
-				"applydefaultoptions;style,single;screen,ScreenSimpleSelectMusic"
-			,24,0,"#AAAAAA",ThemeColor,ThemeColor,ThemeColor.."00",0},
+				"applydefaultoptions;style,single;screen,ScreenSelectMusic"
+			,26,0,"#AAAAAA",ThemeColor,ThemeColor,ThemeColor.."00",0.2},
 			{"Options",
 				"screen,ScreenOptionsService"
-			,24,0,"#AAAAAA",ThemeColor,ThemeColor,ThemeColor.."00",0},
-			{"Editor",
-				"screen,ScreenColorChange"
-			,24,0,"#AAAAAA",ThemeColor,ThemeColor,ThemeColor.."00",0},
+			,26,0,"#AAAAAA",ThemeColor,ThemeColor,ThemeColor.."00",0.2},
 			{"Color",
+				"screen,ScreenColorChange"
+			,26,0,"#AAAAAA",ThemeColor,ThemeColor,ThemeColor.."00",0.2},
+			{"Editor",
 				"urlnoexit,https://arrowvortex.ddrnl.com/"
-			,24,0,"#AAAAAA",ThemeColor,ThemeColor,ThemeColor.."00",0},
+			,26,0,"#AAAAAA",ThemeColor,ThemeColor,ThemeColor.."00",0.2},
 			{"Github",
 				"urlnoexit,https://github.com/etternagame/etterna"
-			,24,0,"#AAAAAA",ThemeColor,ThemeColor,ThemeColor.."00",0},
+			,26,0,"#AAAAAA",ThemeColor,ThemeColor,ThemeColor.."00",0.2},
 			{"Exit",
 				"screen,ScreenExit"
-			,24,0,"#AAAAAA",ThemeColor,ThemeColor,ThemeColor.."00",0},
+			,26,0,"#AAAAAA",ThemeColor,ThemeColor,ThemeColor.."00",0.2},
 		});
 	};
 }
